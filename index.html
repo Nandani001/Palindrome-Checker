@@ -66,11 +66,12 @@
 
 
             let input = document.getElementById('input').value;
+            let convertLower = input.toLowerCase();
             let answer = document.querySelector('.answer')
-            let reverseInput = input.split('').reverse().join('');
+            let reverseInput = convertLower.split('').reverse().join('');
 
 
-            if (input == reverseInput) {
+            if (convertLower === reverseInput) {
                 answer.textContent = "yes! It's a palindrome";
             } else {
                 answer.textContent = "Nope! Not a palindrome";
